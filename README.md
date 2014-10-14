@@ -12,6 +12,7 @@ this time it pick up sk->sk_bound_dev_if as key to lookup route table, and this 
  there are two result: 
  1) it find a route entry, this packet will route to that destionation
  2) it doesn't, this packet will drop silently.
+ 
 for example:
 there are two WAN interface, 
 interface WAN1: IP address 11.11.11.11, mac address 11:11:11:11:11:11
@@ -25,4 +26,5 @@ but it won't change its source IP address because it already did in first time l
 if it doesn't find a route entry in second time, this DNS query will be dropped silently.
 and there is another solution except this patch, which is add a policy route rule for interface WAN1 with source address lookup, but I think in this scenario 
 it is not a good option.
+
 any questions, drop me a email: weishigoname@hotmail.com
