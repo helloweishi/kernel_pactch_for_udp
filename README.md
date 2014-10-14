@@ -36,4 +36,6 @@ if it doesn't find a route entry in second time, this DNS query will be dropped 
 and there is another solution except this patch, which is add a policy route rule for interface WAN1 with source address lookup, but I think in this scenario 
 it is not a good option.
 
+this patch is verified in kernel version 3.4.11
+
 any questions, drop me a email: weishigoname@hotmail.com
